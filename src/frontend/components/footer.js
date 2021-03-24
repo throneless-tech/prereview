@@ -205,7 +205,7 @@ export default function Footer() {
             <Typography variant="h4" component="h2" gutterBottom>
               Stay Connected.
             </Typography>
-            <Typography component="div" gutterBottom>
+            {/*<Typography component="div" gutterBottom>
               <Link
                 href="https://mailchi.mp/97886570610a/prereview-newsletter-signup"
                 className={classes.signUp}
@@ -213,7 +213,59 @@ export default function Footer() {
                 Sign up
                 <ArrowForwardIosIcon className={classes.signUpIcon} />
               </Link>
-            </Typography>
+            </Typography>*/}
+            {/* Begin Mailchimp Signup Form */}
+            <link
+              href="https://cdn-images.mailchimp.com/embedcode/slim-10_7.css"
+              rel="stylesheet"
+              type="text/css"
+            />
+            <div id="mc_embed_signup">
+              <form
+                action="https://prereview.us2.list-manage.com/subscribe/post?u=59f5a6fb4d4e4c2764dd6b2c8&amp;id=ea4641711a"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                className="validate"
+                target="_blank"
+                noValidate
+              >
+                <div id="mc_embed_signup_scroll">
+                  <label htmlFor="mce-EMAIL">Stay connected.</label>
+                  <input
+                    type="email"
+                    value=""
+                    name="EMAIL"
+                    className="email"
+                    id="mce-EMAIL"
+                    placeholder="email address"
+                    required
+                  />
+                  {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+                  <div
+                    style={{ position: 'absolute', left: '-5000px' }}
+                    aria-hidden="true"
+                  >
+                    <input
+                      type="text"
+                      name="b_59f5a6fb4d4e4c2764dd6b2c8_ea4641711a"
+                      tabIndex="-1"
+                      value=""
+                    />
+                  </div>
+                  <div className="clear">
+                    <input
+                      type="submit"
+                      value="Subscribe"
+                      name="subscribe"
+                      id="mc-embedded-subscribe"
+                      className="button"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+            {/* End mc_embed_signup */}
             <Typography variant="h5" component="div">
               <em>
                 By providing your email address, you are opting in to receive
