@@ -189,19 +189,19 @@ const CommunityPanel = () => {
     setCommunity({ ...community, events });
   };
 
-  const handleAddTag = tag => {
-    const oldTags = community.tags;
-    const tags = [...oldTags, tag];
-    const newCommunity = { ...community, tags };
-    setCommunity(newCommunity);
-  };
+  // const handleAddTag = tag => {
+  //   const oldTags = community.tags;
+  //   const tags = [...oldTags, tag];
+  //   const newCommunity = { ...community, tags };
+  //   setCommunity(newCommunity);
+  // };
 
-  const handleDeleteTag = tag => {
-    const { tags: oldTags } = community;
+  // const handleDeleteTag = tag => {
+  //   const { tags: oldTags } = community;
 
-    const tags = oldTags.filter(t => t.uuid !== tag.uuid);
-    setCommunity({ ...community, tags });
-  };
+  //   const tags = oldTags.filter(t => t.uuid !== tag.uuid);
+  //   setCommunity({ ...community, tags });
+  // };
 
   useEffect(() => {
     if (!loadingCommunity) {
