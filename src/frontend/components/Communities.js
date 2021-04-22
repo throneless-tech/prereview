@@ -183,7 +183,10 @@ const Communities = () => {
                     </div>
                   )}
                 </Grid>
-                <Grid item xs={12} md={4} className={classes.smallColumn}>
+                { /** THE TAGS SECTION BELOW IS COMMENTED OUT UNTIL FURTHER DIRECTION FROM PREREVIEW LEADERSHIP
+                 * ON HOW THEY'D LIKE TAGS TO WORK
+                 */}
+                {/* <Grid item xs={12} md={4} className={classes.smallColumn}>
                   <Typography variant="h5" component="h2" gutterBottom={true}>
                     Search communities by tag
                     <Box mt={2}>
@@ -205,7 +208,7 @@ const Communities = () => {
                       )}
                     </Box>
                   </Typography>
-                </Grid>
+                </Grid> */}
               </Grid>
             </Box>
           </Container>

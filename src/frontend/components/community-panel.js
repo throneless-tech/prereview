@@ -20,7 +20,7 @@ import {
 
 // components
 import AddEvent from './add-event';
-import AddTag from './add-tag';
+// import AddTag from './add-tag';
 import AddUser from './add-user';
 import HeaderBar from './header-bar';
 import Loading from './loading';
@@ -383,7 +383,10 @@ const CommunityPanel = () => {
                     })
                   : null}
               </Box>
-              <Box mb={4}>
+              {/** THE TAGS SECTION BELOW IS COMMENTED OUT UNTIL FURTHER DIRECTION FROM PREREVIEW LEADERSHIP
+               * ON HOW THEY'D LIKE TAGS TO WORK
+               */}
+              {/* <Box mb={4}>
                 <Typography variant="h4" component="h2" gutterBottom={true}>
                   Tags
                 </Typography>
@@ -400,7 +403,7 @@ const CommunityPanel = () => {
                       );
                     })
                   : null}
-              </Box>
+              </Box> */}
               <Box mb={4}>
                 <Typography variant="h4" component="h2" gutterBottom={true}>
                   Templates

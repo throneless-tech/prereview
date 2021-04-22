@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const AddEvent = ({ community, addTag }) => {
+const AddTag = ({ community, addTag }) => {
   const classes = useStyles();
 
   const [inputs, setInputs] = useState({});
@@ -146,9 +146,9 @@ const AddEvent = ({ community, addTag }) => {
   );
 };
 
-AddEvent.propTypes = {
+AddTag.propTypes = {
   community: PropTypes.string,
   addTag: PropTypes.func,
 };
 
-export default AddEvent;
+export default AddTag;

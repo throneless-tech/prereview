@@ -322,7 +322,12 @@ export default function Reviews() {
                     </Typography>
                   </Grid>
                 ) : null}
-                {tags && Array.isArray(tags) && tags.length > 0 ? (
+
+                {/** THE TAGS SECTION BELOW IS COMMENTED OUT UNTIL FURTHER DIRECTION FROM PREREVIEW LEADERSHIP
+                 * ON HOW THEY'D LIKE TAGS TO WORK
+                 */}
+                 
+                {/* {tags && Array.isArray(tags) && tags.length > 0 ? (
                   <Grid
                     container
                     item
@@ -376,7 +381,7 @@ export default function Reviews() {
                       </Select>
                     </Grid>
                   </Grid>
-                ) : null}
+                ) : null} */}
                 {communities &&
                 Array.isArray(communities) &&
                 communities.length > 0 ? (
