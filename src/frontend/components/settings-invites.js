@@ -1,6 +1,7 @@
 // base imports
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
 // hooks
 import {
@@ -134,6 +135,7 @@ InviteRow.propTypes = {
 
 export default function SettingsInvites({ user }) {
   const classes = useStyles();
+  const history = useHistory();
 
   // fetch all invites from the API
   const [invites, setInvites] = useState(null);
@@ -167,7 +169,7 @@ export default function SettingsInvites({ user }) {
         setReviews(reviewsData);
       }
     }
-  }, [invitesLoading]);
+  }, [reviewsData, reviewsLoading]);
 
   const onRemove = remove => {
     const filtered = invites.filter(
@@ -237,18 +239,32 @@ export default function SettingsInvites({ user }) {
                     <StyledTableRow key={review.uuid}>
                       <TableCell component="th" scope="row">
                         <Link
-                          href={`/preprints/${review.preprint.uuid}/drafts/${
-                            review.uuid
-                          }`}
+                          onClick={() => {
+                            history.push(
+                              `/preprints/${review.preprint.uuid}/drafts/${
+                                review.uuid
+                              }`,
+                              {
+                                tab: 1,
+                              },
+                            );
+                          }}
                         >
                           {review.preprint.title}
                         </Link>
                       </TableCell>
                       <TableCell>
                         <Link
-                          href={`/preprints/${review.preprint.uuid}/drafts/${
-                            review.uuid
-                          }`}
+                          onClick={() => {
+                            history.push(
+                              `/preprints/${review.preprint.uuid}/drafts/${
+                                review.uuid
+                              }`,
+                              {
+                                tab: 1,
+                              },
+                            );
+                          }}
                         >
                           {review.preprint.handle}
                         </Link>
